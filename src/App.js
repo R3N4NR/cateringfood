@@ -1,10 +1,6 @@
-import {HomePage} from './components/homePage/home'
+import { HomePage } from './components/homePage/home';
 function App() {
-  return (
-    <HomePage/>
-  )
+    return <HomePage />;
 }
 
 export default App;
-
-
