@@ -1,52 +1,51 @@
 .App {
-  text-align: center;
-  font-family: 'Montserrat';
+    text-align: center;
+    font-family: 'Montserrat';
 }
 
 .App-logo {
-  height: 30vmin;
-  pointer-events: none;
+    height: 30vmin;
+    pointer-events: none;
 }
-.logoFont{
-  font-family: 'Montserrat'
+.logoFont {
+    font-family: 'Montserrat';
 }
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  justify-content: flex-start;
-  padding: 40px;
-  align-items: flex-start;
-  flex-direction: column; 
-  
-  color: white;
-  background-color: "#FFF5E7";
+    justify-content: flex-start;
+    padding: 40px;
+    align-items: flex-start;
+    flex-direction: column;
+
+    color: white;
+    background-color: '#FFF5E7';
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
-.personalize:hover{
-  text-decoration: underline orangered;
-  cursor: pointer;
+.personalize:hover {
+    text-decoration: underline orangered;
+    cursor: pointer;
+}
 
-}
-.searchInput::placeholder{
-  text-align: center;
-  
+.searchInput::placeholder {
+    text-align: center;
 }
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-.Box{
-  width: 100%;
-  color: 'red';
+.Box {
+    width: 100%;
+    color: 'red';
 }

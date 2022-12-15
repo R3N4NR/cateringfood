@@ -13,7 +13,6 @@ import { StatsField } from './stats';
 import { ReactComponent as Watch } from '../../assets/pocketwatch.svg';
 import { ReactComponent as Badge } from '../../assets/badge.svg';
 import { ReactComponent as Phone } from '../../assets/smartphone.svg';
-import { ReactComponent as Barbecue } from '../../assets/barbecue.svg';
 
 export const BodyContent = () => {
     return (
@@ -157,19 +156,112 @@ export const BodySession = () => {
                     </Flex>
                 </Card>
             </SimpleGrid>
-            <Flex
-                height="100vh"
-                width="100%"
-                marginLeft="100px"
-                marginTop="100px"
-            >
-                <Box display="inline-block">
-                    <Barbecue />
+            <Flex width="100%">
+                <Box display="inline-block" marginTop="105px">
+                    <img
+                        src={require('../../assets/images/toastedChicken.png')}
+                        alt=""
+                    />
                 </Box>
-                <Box marginLeft="200px">
-                    <Text>TESTE</Text>
+                <Flex
+                    width="642px"
+                    height="524px"
+                    marginLeft="110px"
+                    marginTop="105px"
+                >
+                    <Box lineHeight="30px">
+                        <Text fontSize="36px" fontWeight="semibold">
+                            Sobre nós
+                        </Text>
+                        <Text fontSize="83.2px" fontWeight="bold">
+                            +150
+                        </Text>
+                        <Text fontSize="46.3px" fontWeight="regular">
+                            Deliciosos pratos
+                        </Text>
+                        <Text
+                            flexWrap="wrap"
+                            fontSize="24px"
+                            fontWeight="regular"
+                        >
+                            Donec consectetur tempor condimentum. Duis pharetra,
+                            sapien ut vehicula dignissim, neque neque dapibus
+                            magna, in convallis augue magna vel orci.
+                        </Text>
+                        <Box
+                            as="button"
+                            cursor="pointer"
+                            width="181px"
+                            height="57px"
+                            fontSize="16px"
+                            fontWeight="bold"
+                            backgroundColor="#FE5722"
+                            borderStyle="hidden"
+                            borderRadius="10px"
+                        >
+                            Explore o cardápio
+                        </Box>
+                    </Box>
+                </Flex>
+            </Flex>
+            <Flex
+                width="100%"
+                justifyContent="center"
+                display="flex"
+                marginTop="105px"
+            >
+                <Box
+                    display="inline-flex"
+                    justifyContent="space-evenly"
+                    width="646px"
+                >
+                    <Text
+                        fontSize="18px"
+                        className="personalize"
+                        fontWeight="regular"
+                    >
+                        Menu
+                    </Text>
+                    <Text
+                        fontSize="18px"
+                        className="personalize"
+                        fontWeight="regular"
+                    >
+                        Para festas
+                    </Text>
+                    <Text
+                        fontSize="18px"
+                        className="personalize"
+                        fontWeight="regular"
+                    >
+                        Sobre
+                    </Text>
+                    <Text
+                        fontSize="18px"
+                        className="personalize"
+                        fontWeight="regular"
+                    >
+                        Review de cardápios
+                    </Text>
+                    <Text
+                        fontSize="18px"
+                        className="personalize"
+                        fontWeight="regular"
+                    >
+                        Restaurantes
+                    </Text>
                 </Box>
             </Flex>
+            <Flex
+                height="100px"
+                width="100%"
+                justifyContent="center"
+                display="flex"
+                marginTop="60px"
+            >
+                <Box height="1034px" width="1194px" backgroundColor="red"></Box>
+            </Flex>
+            {/* fechamento do principal*/}
         </Flex>
     );
 };
