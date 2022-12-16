@@ -13,6 +13,8 @@ import { StatsField } from './stats';
 import { ReactComponent as Watch } from '../../assets/pocketwatch.svg';
 import { ReactComponent as Badge } from '../../assets/badge.svg';
 import { ReactComponent as Phone } from '../../assets/smartphone.svg';
+import { CardsTab } from './homePageSections/CardsTab';
+import React, { useState } from 'react';
 
 export const BodyContent = () => {
     return (
@@ -50,6 +52,9 @@ export const BodyContent = () => {
     );
 };
 export const BodySession = () => {
+    const [teste, setTeste] = useState('');
+    const [check, setCheck] = useState('');
+    console.log(check);
     return (
         <Flex width="100%" backgrounColor="blue" height="100vh" display="block">
             <Flex
@@ -198,6 +203,7 @@ export const BodySession = () => {
                             backgroundColor="#FE5722"
                             borderStyle="hidden"
                             borderRadius="10px"
+                            color="white"
                         >
                             Explore o cardápio
                         </Box>
@@ -217,50 +223,63 @@ export const BodySession = () => {
                 >
                     <Text
                         fontSize="18px"
-                        className="personalize"
                         fontWeight="regular"
+                        color={teste}
+                        onClick={e => {
+                            setTeste('#FE5722');
+                            setCheck(e.currentTarget.id);
+                        }}
+                        id="todos"
                     >
-                        Menu
+                        Todos
                     </Text>
                     <Text
                         fontSize="18px"
-                        className="personalize"
                         fontWeight="regular"
+                        color={teste}
+                        onClick={e => {
+                            setTeste('#FE5722');
+                            setCheck(e.currentTarget.id);
+                        }}
+                        id="churrasco"
                     >
-                        Para festas
+                        Churrasco
                     </Text>
                     <Text
                         fontSize="18px"
-                        className="personalize"
                         fontWeight="regular"
+                        color={teste}
+                        onClick={() => setTeste('#FE5722')}
                     >
-                        Sobre
+                        Massas
                     </Text>
                     <Text
                         fontSize="18px"
-                        className="personalize"
                         fontWeight="regular"
+                        color={teste}
+                        onClick={() => setTeste('#FE5722')}
                     >
-                        Review de cardápios
+                        Lanches
                     </Text>
                     <Text
                         fontSize="18px"
-                        className="personalize"
                         fontWeight="regular"
+                        color={teste}
+                        onClick={() => setTeste('#FE5722')}
                     >
-                        Restaurantes
+                        Da casa
+                    </Text>
+                    <Text
+                        fontSize="18px"
+                        fontWeight="regular"
+                        color={teste}
+                        onClick={() => setTeste('#FE5722')}
+                    >
+                        Brasileira
                     </Text>
                 </Box>
             </Flex>
-            <Flex
-                height="100px"
-                width="100%"
-                justifyContent="center"
-                display="flex"
-                marginTop="60px"
-            >
-                <Box height="1034px" width="1194px" backgroundColor="red"></Box>
-            </Flex>
+            <CardsTab />
             {/* fechamento do principal*/}
         </Flex>
     );

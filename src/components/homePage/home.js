@@ -1,4 +1,4 @@
-import { Grid, GridItem, Box, Flex } from '@chakra-ui/react';
+import { Grid, GridItem, Flex } from '@chakra-ui/react';
 import { Header } from './header';
 
 import { BodyContent, BodySession } from './body';
