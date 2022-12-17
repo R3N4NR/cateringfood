@@ -1,7 +1,7 @@
 import { Grid, GridItem, Flex } from '@chakra-ui/react';
 import { Header } from './header';
 
-import { BodyContent, BodySession } from './body';
+import { BodyContent, BodySession, BodySessionTwo } from './body';
 export const HomePage = () => {
     return (
         <Flex display="block">
@@ -9,9 +9,10 @@ export const HomePage = () => {
                 templateAreas={`"header header"
                   "nav main"
                   "nav body"
-                  "footer footer"`}
-                gridTemplateRows={'170px 100%  100%'}
+                  "section body"`}
+                gridTemplateRows={'100% 100%  100% 100%'}
                 gridTemplateColumns={'0 1fr'}
+                flexDirection="column"
             >
                 <GridItem area={'header'}>
                     <Header />

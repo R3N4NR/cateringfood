@@ -13,12 +13,15 @@ import { StatsField } from './stats';
 import { ReactComponent as Watch } from '../../assets/pocketwatch.svg';
 import { ReactComponent as Badge } from '../../assets/badge.svg';
 import { ReactComponent as Phone } from '../../assets/smartphone.svg';
+import { ReactComponent as FilledArrow } from '../../assets/squareArrow.svg';
+import { AccordionTab } from './homePageSections/AccordionTab';
+import { ReactComponent as UnfilledArrow } from '../../assets/squareArrowUnfilled.svg';
 import { CardsTab } from './homePageSections/CardsTab';
 import React, { useState } from 'react';
 
 export const BodyContent = () => {
     return (
-        <Flex>
+        <Flex display="block">
             <Box
                 height="75vh"
                 width="100%"
@@ -52,9 +55,16 @@ export const BodyContent = () => {
     );
 };
 export const BodySession = () => {
-    const [teste, setTeste] = useState('');
-    const [check, setCheck] = useState('');
-    console.log(check);
+    const initialState = {
+        value1: '#272d36',
+        value2: '#272d36',
+        value3: '#272d36',
+        value4: '#272d36',
+        value5: '#272d36',
+        value6: '#272d36',
+    };
+    const [value, setValue] = useState({ initialState });
+
     return (
         <Flex width="100%" backgrounColor="blue" height="100vh" display="block">
             <Flex
@@ -220,67 +230,210 @@ export const BodySession = () => {
                     display="inline-flex"
                     justifyContent="space-evenly"
                     width="646px"
+                    _hover={{
+                        cursor: 'pointer',
+                    }}
                 >
                     <Text
                         fontSize="18px"
                         fontWeight="regular"
-                        color={teste}
+                        color={value.value1}
                         onClick={e => {
-                            setTeste('#FE5722');
-                            setCheck(e.currentTarget.id);
+                            setValue(prevState => {
+                                return {
+                                    ...(prevState = '#272d36'),
+                                    value1: '#FE5722',
+                                };
+                            });
                         }}
-                        id="todos"
                     >
                         Todos
                     </Text>
                     <Text
                         fontSize="18px"
                         fontWeight="regular"
-                        color={teste}
+                        color={value.value2}
                         onClick={e => {
-                            setTeste('#FE5722');
-                            setCheck(e.currentTarget.id);
+                            setValue(prevState => {
+                                return {
+                                    ...(prevState = '#272d36'),
+                                    value2: '#FE5722',
+                                };
+                            });
                         }}
-                        id="churrasco"
                     >
                         Churrasco
                     </Text>
                     <Text
                         fontSize="18px"
                         fontWeight="regular"
-                        color={teste}
-                        onClick={() => setTeste('#FE5722')}
+                        color={value.value3}
+                        onClick={() =>
+                            setValue(prevState => {
+                                return {
+                                    ...(prevState = '#272d36'),
+                                    value3: '#FE5722',
+                                };
+                            })
+                        }
                     >
                         Massas
                     </Text>
                     <Text
                         fontSize="18px"
                         fontWeight="regular"
-                        color={teste}
-                        onClick={() => setTeste('#FE5722')}
+                        color={value.value4}
+                        onClick={() =>
+                            setValue(prevState => {
+                                return {
+                                    ...(prevState = '#272d36'),
+                                    value4: '#FE5722',
+                                };
+                            })
+                        }
                     >
                         Lanches
                     </Text>
                     <Text
                         fontSize="18px"
                         fontWeight="regular"
-                        color={teste}
-                        onClick={() => setTeste('#FE5722')}
+                        color={value.value5}
+                        onClick={() =>
+                            setValue(prevState => {
+                                return {
+                                    ...(prevState = '#272d36'),
+                                    value5: '#FE5722',
+                                };
+                            })
+                        }
                     >
                         Da casa
                     </Text>
                     <Text
                         fontSize="18px"
                         fontWeight="regular"
-                        color={teste}
-                        onClick={() => setTeste('#FE5722')}
+                        color={value.value6}
+                        onClick={() =>
+                            setValue(prevState => {
+                                return {
+                                    ...(prevState = '#272d36'),
+                                    value6: '#FE5722',
+                                };
+                            })
+                        }
                     >
                         Brasileira
                     </Text>
                 </Box>
             </Flex>
-            <CardsTab />
+            <Box justifyContent="center" display="flex">
+                <CardsTab />
+            </Box>
+            <Box justifyContent="center" display="flex">
+                <BodySessionTwo />
+            </Box>
+            <Box justifyContent="center" display="flex">
+                <BodySessionThree />
+            </Box>
             {/* fechamento do principal*/}
+        </Flex>
+    );
+};
+
+export const BodySessionTwo = () => {
+    return (
+        //BOX AVALIÇÕES
+        <Flex
+            height="1050px"
+            width="1196px"
+            justifyContent="center"
+            display="flex"
+            alignItems="center"
+        >
+            <Box width="598px" height="400px" display="inline-block">
+                <Box width="454px">
+                    <Text color="#272D36" fontWeight="semibold" fontSize="36px">
+                        O que as pessoas dizem sobre o buffet Argolo
+                    </Text>
+                </Box>
+                <Box width="520px">
+                    <Text color="#272D36">
+                        Donec consectetur tempor condimentum. Duis pharetra,
+                        sapien ut vehicula dignissim, neque neque dapibus magna,
+                        in convallis augue magna vel orci.
+                    </Text>
+                </Box>
+                <Box width="300px" height="135px" display="inline-flex">
+                    <Box
+                        width="112px"
+                        height="96px"
+                        backgroundColor="red"
+                        borderRadius="100%"
+                        className="icon"
+                        border="hidden"
+                    >
+                        <img
+                            src={require('../../assets/images/people.jpg')}
+                            alt=""
+                        />
+                    </Box>
+                    <Box>
+                        <Text
+                            fontSize="24px"
+                            fontWeight="semibold"
+                            marginLeft="17px"
+                        >
+                            Ramon Souza
+                        </Text>
+                        <Text
+                            fontSize="16px"
+                            fontWeight="medium"
+                            marginTop="-20px"
+                            marginLeft="20px"
+                        >
+                            São Lourenço, RS
+                        </Text>
+                        <Box marginLeft="17px">
+                            <UnfilledArrow />
+                            <FilledArrow />
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box display="inline-block">
+                <img
+                    src={require('../../assets/images/foodPlate.png')}
+                    alt=""
+                />
+            </Box>
+        </Flex>
+    );
+};
+
+export const BodySessionThree = () => {
+    return (
+        <Flex
+            height="1050px"
+            width="100%"
+            justifyContent="center"
+            display="flex"
+            backgroundColor="#fffaf9"
+        >
+            <Flex display="block" width="840px" justifyContent="center">
+                <Box
+                    fontSize="48px"
+                    width="840px"
+                    fontWeight="semibold"
+                    justifyContent="center"
+                    display="flex"
+                >
+                    <Text display="inline-block">Perguntas frequentes</Text>
+                </Box>
+                <Box justifyContent="center" display="flex">
+                    <AccordionTab />
+                </Box>
+            </Flex>
         </Flex>
     );
 };

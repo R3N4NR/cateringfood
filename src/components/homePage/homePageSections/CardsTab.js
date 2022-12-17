@@ -3,15 +3,15 @@ import { Flex, Box, Image, Card, Text } from '@chakra-ui/react';
 export const CardsTab = () => {
     return (
         <Flex
-            height="100px"
-            width="100%"
+            height="1050px"
+            width="1196px"
             justifyContent="center"
             display="flex"
             marginTop="60px"
         >
             <Flex
-                height="1050px"
-                width="1196px"
+                width="100%"
+                heigth="100%"
                 justifyContent="space-evenly"
                 display="flex"
             >
