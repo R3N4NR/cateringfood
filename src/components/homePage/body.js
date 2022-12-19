@@ -16,6 +16,8 @@ import { ReactComponent as Phone } from '../../assets/smartphone.svg';
 import { ReactComponent as FilledArrow } from '../../assets/squareArrow.svg';
 import { AccordionTab } from './homePageSections/AccordionTab';
 import { ReactComponent as UnfilledArrow } from '../../assets/squareArrowUnfilled.svg';
+import { ReactComponent as GooglePlayIcon } from '../../assets/googleplay.svg';
+import { ReactComponent as AppleStoreIcon } from '../../assets/applestore.svg';
 import { CardsTab } from './homePageSections/CardsTab';
 import React, { useState } from 'react';
 
@@ -66,7 +68,7 @@ export const BodySession = () => {
     const [value, setValue] = useState({ initialState });
 
     return (
-        <Flex width="100%" backgrounColor="blue" height="100vh" display="block">
+        <Flex width="100%" backgrounColor="blue" height="100%" display="block">
             <Flex
                 height="130px"
                 width="100%"
@@ -171,7 +173,7 @@ export const BodySession = () => {
                     </Flex>
                 </Card>
             </SimpleGrid>
-            <Flex width="100%">
+            <Flex width="100%" justifyContent="space-between">
                 <Box display="inline-block" marginTop="105px">
                     <img
                         src={require('../../assets/images/toastedChicken.png')}
@@ -335,6 +337,12 @@ export const BodySession = () => {
             <Box justifyContent="center" display="flex">
                 <BodySessionThree />
             </Box>
+            <Box justifyContent="center" display="flex">
+                <BodySessionFour />
+            </Box>
+            <Box justifyContent="center" display="flex">
+                <MemberRegister />
+            </Box>
             {/* fechamento do principal*/}
         </Flex>
     );
@@ -365,7 +373,7 @@ export const BodySessionTwo = () => {
                 </Box>
                 <Box width="300px" height="135px" display="inline-flex">
                     <Box
-                        width="112px"
+                        width="96px"
                         height="96px"
                         backgroundColor="red"
                         borderRadius="100%"
@@ -414,7 +422,7 @@ export const BodySessionTwo = () => {
 export const BodySessionThree = () => {
     return (
         <Flex
-            height="1050px"
+            height="100%"
             width="100%"
             justifyContent="center"
             display="flex"
@@ -434,6 +442,106 @@ export const BodySessionThree = () => {
                     <AccordionTab />
                 </Box>
             </Flex>
+        </Flex>
+    );
+};
+
+export const BodySessionFour = () => {
+    return (
+        <Flex
+            width="100%"
+            height="950px"
+            justifyContent="center"
+            display="flex"
+        >
+            <Flex
+                justifyContent="space-between"
+                alignItems="center"
+                width="100%"
+            >
+                <Box display="inline-block" marginTop="105px">
+                    <img
+                        src={require('../../assets/images/iphone.png')}
+                        alt=""
+                    />
+                </Box>
+
+                <Box display="inline-block" height="500px" marginLeft="200px">
+                    <Box width="480px">
+                        <Text color="#272D36" fontSize="36px" fontWeight="bold">
+                            Baixe o aplicativo na sua App Store
+                        </Text>
+                    </Box>
+                    <Box width="550px">
+                        <Text
+                            fontSize="16px"
+                            fontWeight="regular"
+                            color="#272d36"
+                        >
+                            Donec consectetur tempor condimentum. Duis pharetra,
+                            sapien ut vehicula dignissim, neque neque dapibus
+                            magna, in convallis augue magna vel orci.
+                        </Text>
+                    </Box>
+                    <Box
+                        width="420px"
+                        justifyContent="space-around"
+                        display="flex"
+                    >
+                        <GooglePlayIcon />
+                        <AppleStoreIcon />
+                    </Box>
+                </Box>
+            </Flex>
+        </Flex>
+    );
+};
+
+export const MemberRegister = () => {
+    return (
+        <Flex
+            width="100%"
+            height="635px"
+            justifyContent="center"
+            display="flex"
+            alignItems="center"
+        >
+            <Box
+                width="1182px"
+                height="395px"
+                justifyContent="center"
+                display="flex"
+                alignItems="center"
+                backgroundImage={require('../../assets/images/newsLetterCover.jpg')}
+            >
+                <Box
+                    as="input"
+                    id="inputNews"
+                    display="inline-block"
+                    width="512px"
+                    height=" 60px"
+                    borderRadius="10px"
+                    justifyContent="right"
+                    fontSize="14px"
+                    placeholder="Seu e-mail aqui"
+                />
+                <Box
+                    backgroundColor="#ff744c"
+                    width="127px"
+                    zIndex={2}
+                    position="absolute"
+                    height=" 64px"
+                    borderRadius="10px"
+                    borderLeftRadius="0px"
+                    marginLeft="390px"
+                    as="button"
+                    cursor="pointer"
+                    fontSize="14px"
+                    color="white"
+                >
+                    ASSINAR
+                </Box>
+            </Box>
         </Flex>
     );
 };

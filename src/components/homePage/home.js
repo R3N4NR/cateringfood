@@ -1,30 +1,18 @@
-import { Grid, GridItem, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { Header } from './header';
-
-import { BodyContent, BodySession, BodySessionTwo } from './body';
+import { Footer } from './footer';
+import { BodyContent, BodySession } from './body';
 export const HomePage = () => {
     return (
         <Flex display="block">
-            <Grid
-                templateAreas={`"header header"
-                  "nav main"
-                  "nav body"
-                  "section body"`}
-                gridTemplateRows={'100% 100%  100% 100%'}
-                gridTemplateColumns={'0 1fr'}
-                flexDirection="column"
-            >
-                <GridItem area={'header'}>
-                    <Header />
-                </GridItem>
+            <Box direction="column" maxW={{ xl: '1200px' }} m="0 auto">
+                <Header />
 
-                <GridItem area={'main'}>
-                    <BodyContent />
-                </GridItem>
-                <GridItem area={'body'}>
-                    <BodySession />
-                </GridItem>
-            </Grid>
+                <BodyContent />
+
+                <BodySession />
+            </Box>
+            <Footer />
         </Flex>
     );
 };

@@ -57,6 +57,17 @@
 .searchInput::placeholder {
     text-align: center;
 }
+#inputNews {
+    text-indent: 26px;
+}
+.footerText {
+    font-weight: lighter;
+}
+hr {
+    border-color: #bdbdbd;
+    width: 80%;
+    margin-top: 10px;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
