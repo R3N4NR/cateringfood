@@ -23,17 +23,15 @@ import React, { useState } from 'react';
 
 export const BodyContent = () => {
     return (
-        <Flex display="block">
-            <Box
-                height="75vh"
-                width="100%"
-                backgroundColor="#FFF5E7"
-                marginTop="-20px"
-            >
-                <Box position="absolute" right="0">
-                    <Plate />
-                </Box>
-                <Box position="absolute" left="74" width="550px">
+        <Flex
+            width="100%"
+            height="700px"
+            justifyContent="center"
+            display="flex"
+            backgroundColor="#fff5f2"
+        >
+            <Flex justifyContent="space-between" width="100%">
+                <Box display="inline-block" width="550px" marginLeft="205px">
                     <Text fontSize="64px" as="b" color="#5E5858">
                         Não é só comida,{' '}
                         <span style={{ fontWeight: 'normal' }}>é uma</span>
@@ -52,7 +50,10 @@ export const BodyContent = () => {
                     <BodyButton />
                     <StatsField />
                 </Box>
-            </Box>
+                <Box display="inline-block">
+                    <Plate />
+                </Box>
+            </Flex>
         </Flex>
     );
 };

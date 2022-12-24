@@ -8,37 +8,40 @@ import CustomButtom from './loginButton';
 
 export function Header() {
     return (
-        <Flex display="block" backgroundColor="#FFF5E7">
-            <Box height="150px" width="100%" display="inline-flex">
-                <Box
-                    position="absolute"
-                    marginLeft="74px"
-                    marginTop="67px"
-                    width="225px"
-                    height="44px"
-                    className="logoFont"
-                >
-                    <Logo />
-                </Box>
+        <Flex
+            width="100%"
+            display="flex"
+            alignItems="center"
+            justifyContent="flex-start"
+            backgroundColor="#fff5f2"
+        >
+            <Box height="80%" marginLeft="205px" display="inline-block">
+                <Logo />
+            </Box>
 
-                <Box
-                    width="100%"
-                    height="64px"
-                    marginLeft="274px"
-                    marginRight="55px"
-                    marginBottom="612px"
-                    marginTop="84px"
-                    justifyContent="space-between"
-                    display="inline-flex"
-                >
-                    <Text className="personalize">Menu</Text>
-                    <Text className="personalize">Para festas</Text>
-                    <Text className="personalize">Sobre</Text>
-                    <Text className="personalize">Review de cardápios</Text>
-                    <Text className="personalize">Restaurantes</Text>
-                    <InputCustom />
-                    <CustomButtom />
-                </Box>
+            <Box
+                width="60%"
+                marginTop="50px"
+                justifyContent="space-between"
+                display="flex"
+            >
+                <Text className="personalize" display="inline-block">
+                    Menu
+                </Text>
+                <Text className="personalize" display="inline-block">
+                    Para festas
+                </Text>
+                <Text className="personalize" display="inline-block">
+                    Sobre
+                </Text>
+                <Text className="personalize" display="inline-block">
+                    Review de cardápios
+                </Text>
+                <Text className="personalize" display="inline-block">
+                    Restaurantes
+                </Text>
+                <InputCustom />
+                <CustomButtom />
             </Box>
         </Flex>
     );
