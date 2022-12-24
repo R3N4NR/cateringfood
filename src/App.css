@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'https://fonts.googleapis.com/css?family=Montserrat';
 }
 
 .App-logo {
@@ -15,7 +15,14 @@
         animation: App-logo-spin infinite 20s linear;
     }
 }
-
+.buttonBackground {
+    background: linear-gradient(
+        124.62deg,
+        #ff7a00 38.24%,
+        #eb8c12 52.25%,
+        rgba(255, 151, 18, 0.78) 70.42%
+    );
+}
 .App-header {
     justify-content: flex-start;
     padding: 40px;
@@ -32,6 +39,7 @@
 .personalize:hover {
     text-decoration: underline orangered;
     cursor: pointer;
+    text-decoration-style: double;
 }
 .cards img {
     border-top-right-radius: 1%;
@@ -79,4 +87,26 @@ hr {
 .Box {
     width: 100%;
     color: 'red';
+}
+.loginBackground {
+    background-image: url(./assets/images/backgroundLogin.jpg);
+
+    background-size: cover;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.menuGrid {
+    grid-template-columns: repeat(3);
+    grid-template-rows: auto;
+    width: 90%;
+    column-gap: 50px;
+    row-gap: 40px;
+}
+
+.gridItem #teste {
+    width: 300px;
+    height: 300px;
 }
