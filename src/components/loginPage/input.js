@@ -1,6 +1,6 @@
 import { Input, Box, Image } from '@chakra-ui/react';
-import { ReactComponent as User } from '../../assets/user.svg';
-import { ReactComponent as Lock } from '../../assets/lock.svg';
+import { ReactComponent as User } from '/public/assets/user.svg';
+import { ReactComponent as Lock } from '/public/assets/lock.svg';
 export const CustomInput = ({ type }) => {
     return (
         <Box position="relative">

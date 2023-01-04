@@ -1,8 +1,8 @@
 import { Box, Link, Flex, Text, Input } from '@chakra-ui/react';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as Twitter } from '../../assets/twitterLogin.svg';
-import { ReactComponent as Facebook } from '../../assets/facebookLogin.svg';
-import { ReactComponent as Google } from '../../assets/googleLogin.svg';
+import { ReactComponent as Logo } from '/public/assets/logo.svg';
+import { ReactComponent as Twitter } from '/public/assets/twitterLogin.svg';
+import { ReactComponent as Facebook } from '/public/assets/facebookLogin.svg';
+import { ReactComponent as Google } from '/public/assets/googleLogin.svg';
 import { CustomInput } from './input';
 
 export const Login = () => {
@@ -14,7 +14,7 @@ export const Login = () => {
             fontFamily="Montserrat"
         >
             <Flex
-                backgroundImage={require('../../assets/images/backgroundLogin.jpg')}
+                backgroundImage={require('/public/assets/images/backgroundLogin.jpg')}
                 width="50%"
                 height="100%"
                 position="absolute"

@@ -89,7 +89,7 @@ hr {
     color: 'red';
 }
 .loginBackground {
-    background-image: url(./assets/images/backgroundLogin.jpg);
+    background-image: url(/public/assets/images/backgroundLogin.jpg);
 
     background-size: cover;
 
@@ -109,4 +109,30 @@ hr {
 .gridItem #teste {
     width: 300px;
     height: 300px;
+}
+
+.footerMenuContext:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 5%;
+}
+
+.sidebarOptions li:hover {
+    cursor: pointer;
+    color: #ff6600;
+}
+
+.option {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.active,
+.option:hover {
+    background-color: #ffffee;
+    color: #ff6600;
 }
