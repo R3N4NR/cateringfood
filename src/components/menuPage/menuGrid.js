@@ -1,15 +1,32 @@
-import { Card, CardFooter, CardHeader, GridItem, Text } from '@chakra-ui/react';
+import {
+    Card,
+    CardFooter,
+    CardHeader,
+    GridItem,
+    Img,
+    Text,
+    Tooltip,
+} from '@chakra-ui/react';
 
-export const GridCell = ({ img, price }) => {
+export const GridCell = ({ name, img, price }) => {
     return (
         <>
             <GridItem className="gridItem">
                 <Card>
                     <CardHeader display="flex">
-                        <img src={img} alt="" />
+                        <Img src={img} width="100%" height="400px" />
                     </CardHeader>
                     <CardFooter justifyContent="space-between">
-                        <Text>Burguer com cheedar e fritas</Text>
+                        {/* <Tooltip alignContent="center" label={name}></Tooltip> */}
+                        <Text
+                            width="60%"
+                            // overflow="hidden"
+                            // whiteSpace="nowrap"
+                            // textOverflow="ellipsis"
+                        >
+                            {name}
+                        </Text>
+
                         <Text color="#FE5722" fontWeight="600">
                             R$ {price}
                         </Text>
