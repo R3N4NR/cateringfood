@@ -1,38 +1,138 @@
 .App {
-  text-align: center;
+    text-align: center;
+    font-family: 'https://fonts.googleapis.com/css?family=Montserrat';
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 30vmin;
+    pointer-events: none;
 }
-
+.logoFont {
+    font-family: 'Montserrat';
+}
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
-
+.buttonBackground {
+    background: linear-gradient(
+        124.62deg,
+        #ff7a00 38.24%,
+        #eb8c12 52.25%,
+        rgba(255, 151, 18, 0.78) 70.42%
+    );
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    justify-content: flex-start;
+    padding: 40px;
+    align-items: flex-start;
+    flex-direction: column;
+
+    color: white;
+    background-color: '#FFF5E7';
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
+}
+.personalize:hover {
+    text-decoration: underline orangered;
+    cursor: pointer;
+    text-decoration-style: double;
+}
+.cards img {
+    border-top-right-radius: 1%;
+    border-top-left-radius: 1%;
+}
+.icon img {
+    border-radius: 100%;
+    border: hidden;
+    width: 100%;
+    height: 96px;
+}
+.accordionIcon:hover {
+    cursor: pointer;
+}
+.cards:hover {
+    box-shadow: 0px 0px 5px 5px #f5c3a1;
+}
+.cards:hover #button {
+    background-color: #ff6600;
+    color: white;
 }
 
+.searchInput::placeholder {
+    text-align: center;
+}
+#inputNews {
+    text-indent: 26px;
+}
+.footerText {
+    font-weight: lighter;
+}
+hr {
+    border-color: #bdbdbd;
+    width: 80%;
+    margin-top: 10px;
+}
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.Box {
+    width: 100%;
+    color: 'red';
+}
+.loginBackground {
+    background-image: url(/public/assets/images/backgroundLogin.jpg);
+
+    background-size: cover;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.menuGrid {
+    grid-template-columns: repeat(3);
+    grid-template-rows: auto;
+    width: 90%;
+    column-gap: 50px;
+    row-gap: 40px;
+}
+
+.gridItem #teste {
+    width: 300px;
+    height: 300px;
+}
+
+.footerMenuContext:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 5%;
+}
+
+.sidebarOptions li:hover {
+    cursor: pointer;
+    color: #ff6600;
+}
+
+.option {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.active,
+.option:hover {
+    background-color: #ffffee;
+    color: #ff6600;
 }
