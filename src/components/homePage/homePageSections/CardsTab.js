@@ -29,7 +29,7 @@ export const CardsTab = () => {
                     >
                         <Box>
                             <Image
-                                src={require('../../../assets/images/sopa.jpg')}
+                                src={require('/public/assets/images/sopa.jpg')}
                                 alt=""
                                 width="350px"
                                 height="245px"
@@ -100,7 +100,7 @@ export const CardsTab = () => {
                     >
                         <Box>
                             <Image
-                                src={require('../../../assets/images/peixe.jpg')}
+                                src={require('/public/assets/images/peixe.jpg')}
                                 alt=""
                                 width="350px"
                                 height="245px"
@@ -173,7 +173,7 @@ export const CardsTab = () => {
                     >
                         <Box>
                             <Image
-                                src={require('../../../assets/images/alaminuta.jpg')}
+                                src={require('/public/assets/images/alaminuta.jpg')}
                                 alt=""
                                 width="352px"
                                 height="245px"
@@ -244,7 +244,7 @@ export const CardsTab = () => {
                     >
                         <Box>
                             <Image
-                                src={require('../../../assets/images/massa2.jpeg')}
+                                src={require('/public/assets/images/massa2.jpeg')}
                                 alt=""
                                 width="350px"
                                 height="245px"
@@ -317,7 +317,7 @@ export const CardsTab = () => {
                     >
                         <Box>
                             <Image
-                                src={require('../../../assets/images/hamburguer.jpg')}
+                                src={require('/public/assets/images/hamburguer.jpg')}
                                 alt=""
                                 width="350px"
                                 height="245px"
@@ -388,7 +388,7 @@ export const CardsTab = () => {
                     >
                         <Box>
                             <Image
-                                src={require('../../../assets/images/massa.jpg')}
+                                src={require('/public/assets/images/massa.jpg')}
                                 alt=""
                                 width="350px"
                                 height="245px"

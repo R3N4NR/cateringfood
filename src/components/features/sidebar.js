@@ -1,6 +1,23 @@
 import { Box, Flex, ListItem, UnorderedList, Heading } from '@chakra-ui/react';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
-export const Sidebar = () => {
+import { defaultData } from '../../../public/data/mock/menu';
+import { ReactComponent as Logo } from '/public/assets/logo.svg';
+import data from '/public/data/mock/menu';
+export const Sidebar = ({ menuData }) => {
+    const styleMenu = () => {
+        let header = document.getElementById('sidebar');
+        let btns = header.getElementsByClassName('option');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                var current = document.getElementsByClassName('active');
+                current[0].className = current[0].className.replace(
+                    ' active',
+                    '',
+                );
+                this.className += ' active';
+            });
+        }
+    };
+    styleMenu();
     return (
         <Flex
             width="20%"
@@ -14,26 +31,54 @@ export const Sidebar = () => {
                     <Logo width="70%" />
                 </Flex>
 
-                <Flex flexDirection="column" marginLeft="5%" color="#272D36">
-                    <UnorderedList listStyleType="none">
+                <Flex
+                    flexDirection="column"
+                    marginLeft="5%"
+                    color="#272D36"
+                    id="sidebar"
+                >
+                    <UnorderedList
+                        listStyleType="none"
+                        className="sidebarOptions"
+                    >
                         <Heading as="h4" size="md">
                             Categorias
                         </Heading>
-                        <ListItem>Carnes</ListItem>
-                        <ListItem>Pizza</ListItem>
-                        <ListItem>Hamburguer</ListItem>
-                        <ListItem>Salgados</ListItem>
-                        <ListItem>Comida tradicional</ListItem>
+                        <ListItem
+                            className="option active"
+                            onClick={() => menuData(defaultData.all)}
+                        >
+                            Todos
+                        </ListItem>
+                        <ListItem className="option">Carnes</ListItem>
+                        <ListItem
+                            className="option"
+                            onClick={() => menuData(data.pizza)}
+                        >
+                            Pizza
+                        </ListItem>
+                        <ListItem
+                            className="option"
+                            onClick={() => menuData(data.burguers)}
+                        >
+                            Hamburguer
+                        </ListItem>
+                        <ListItem className="option">Salgados</ListItem>
+                        <ListItem className="option">
+                            Comida tradicional
+                        </ListItem>
                     </UnorderedList>
                     <hr />
-                    <UnorderedList listStyleType="none">
+                    <UnorderedList
+                        listStyleType="none"
+                        className="sidebarOptions"
+                    >
                         <Heading as="h4" size="md">
-                            Categorias
+                            Ordenar
                         </Heading>
-                        <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                        <ListItem>Consectetur adipiscing elit</ListItem>
-                        <ListItem>Integer molestie lorem at massa</ListItem>
-                        <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                        <ListItem>Preço</ListItem>
+                        <ListItem>Mais pedidos</ListItem>
+                        <ListItem>Sugeridos</ListItem>
                     </UnorderedList>
                 </Flex>
             </Box>

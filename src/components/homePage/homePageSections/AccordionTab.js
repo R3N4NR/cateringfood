@@ -7,8 +7,8 @@ import {
     Box,
 } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as SquarePlus } from '../../../assets/squarePlus.svg';
-import { ReactComponent as SquareMinus } from '../../../assets/squareMinus.svg';
+import { ReactComponent as SquarePlus } from '/public/assets/squarePlus.svg';
+import { ReactComponent as SquareMinus } from '/public/assets/squareMinus.svg';
 export const AccordionTab = () => {
     const initialState = {
         item1: true,

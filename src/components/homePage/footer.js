@@ -1,9 +1,9 @@
 import { Box, Link, Flex, Text } from '@chakra-ui/react';
-import { ReactComponent as Logo } from '../../assets/logoFooter.svg';
-import { ReactComponent as Facebook } from '../../assets/facebook.svg';
-import { ReactComponent as Instagram } from '../../assets/instagram.svg';
-import { ReactComponent as Twitter } from '../../assets/twitter.svg';
-import { ReactComponent as LinkedIn } from '../../assets/linkedin.svg';
+import { ReactComponent as Logo } from '/public/assets/logoFooter.svg';
+import { ReactComponent as Facebook } from '/public/assets/facebook.svg';
+import { ReactComponent as Instagram } from '/public/assets/instagram.svg';
+import { ReactComponent as Twitter } from '/public/assets/twitter.svg';
+import { ReactComponent as LinkedIn } from '/public/assets/linkedin.svg';
 export const Footer = () => {
     return (
         <Flex

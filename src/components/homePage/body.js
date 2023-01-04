@@ -7,17 +7,17 @@ import {
     SimpleGrid,
     CardHeader,
 } from '@chakra-ui/react';
-import { ReactComponent as Plate } from '../../assets/plate.svg';
+import { ReactComponent as Plate } from '/public/assets/plate.svg';
 import { BodyButton } from './bodyButton';
 import { StatsField } from './stats';
-import { ReactComponent as Watch } from '../../assets/pocketwatch.svg';
-import { ReactComponent as Badge } from '../../assets/badge.svg';
-import { ReactComponent as Phone } from '../../assets/smartphone.svg';
-import { ReactComponent as FilledArrow } from '../../assets/squareArrow.svg';
+import { ReactComponent as Watch } from '/public/assets/pocketwatch.svg';
+import { ReactComponent as Badge } from '/public/assets/badge.svg';
+import { ReactComponent as Phone } from '/public/assets/smartphone.svg';
+import { ReactComponent as FilledArrow } from '/public/assets/squareArrow.svg';
 import { AccordionTab } from './homePageSections/AccordionTab';
-import { ReactComponent as UnfilledArrow } from '../../assets/squareArrowUnfilled.svg';
-import { ReactComponent as GooglePlayIcon } from '../../assets/googleplay.svg';
-import { ReactComponent as AppleStoreIcon } from '../../assets/applestore.svg';
+import { ReactComponent as UnfilledArrow } from '/public/assets/squareArrowUnfilled.svg';
+import { ReactComponent as GooglePlayIcon } from '/public/assets/googleplay.svg';
+import { ReactComponent as AppleStoreIcon } from '/public/assets/applestore.svg';
 import { CardsTab } from './homePageSections/CardsTab';
 import React, { useState } from 'react';
 
@@ -177,7 +177,7 @@ export const BodySession = () => {
             <Flex width="100%" justifyContent="space-between">
                 <Box display="inline-block" marginTop="105px">
                     <img
-                        src={require('../../assets/images/toastedChicken.png')}
+                        src={require('/public/assets/images/toastedChicken.png')}
                         alt=""
                     />
                 </Box>
@@ -382,7 +382,7 @@ export const BodySessionTwo = () => {
                         border="hidden"
                     >
                         <img
-                            src={require('../../assets/images/people.jpg')}
+                            src={require('/public/assets/images/people.jpg')}
                             alt=""
                         />
                     </Box>
@@ -412,7 +412,7 @@ export const BodySessionTwo = () => {
 
             <Box display="inline-block">
                 <img
-                    src={require('../../assets/images/foodPlate.png')}
+                    src={require('/public/assets/images/foodPlate.png')}
                     alt=""
                 />
             </Box>
@@ -462,7 +462,7 @@ export const BodySessionFour = () => {
             >
                 <Box display="inline-block" marginTop="105px">
                     <img
-                        src={require('../../assets/images/iphone.png')}
+                        src={require('/public/assets/images/iphone.png')}
                         alt=""
                     />
                 </Box>
@@ -513,7 +513,7 @@ export const MemberRegister = () => {
                 justifyContent="center"
                 display="flex"
                 alignItems="center"
-                backgroundImage={require('../../assets/images/newsLetterCover.jpg')}
+                backgroundImage={require('/public/assets/images/newsLetterCover.jpg')}
             >
                 <Box
                     as="input"

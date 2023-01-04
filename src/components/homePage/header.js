@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 import '../../App.css';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
+import { ReactComponent as Logo } from '/public/assets/logo.svg';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import InputCustom from './input';
 import CustomButtom from './loginButton';
-
+import { Link } from 'react-router-dom';
 export function Header() {
     return (
         <Flex
@@ -25,9 +25,11 @@ export function Header() {
                 justifyContent="space-between"
                 display="flex"
             >
-                <Text className="personalize" display="inline-block">
-                    Menu
-                </Text>
+                <Link to="/menu">
+                    <Text className="personalize" display="inline-block">
+                        Menu
+                    </Text>
+                </Link>
                 <Text className="personalize" display="inline-block">
                     Para festas
                 </Text>
