@@ -6,3 +6,5 @@ https://www.figma.com/file/r6njnznxJNray6DrAjUO73/catering?node-id=66%3A43&t=1nZ
 
 Para a página de login usei este design como base:
 https://www.behance.net/gallery/126019893/Sign-in-form-for-a-yacht-club-website
+
+Também utilizei o framework chakra ui
